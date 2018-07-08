@@ -12,13 +12,15 @@ character_event = {
 	hide_window = yes
 	
 	trigger = {
-		independent = no
-		in_revolt = no # revolts shouldn't end on death
-		is_vice_royalty = no # uses standard vanilla mechanic instead
-		higher_real_tier_than = COUNT # should apply for governors, vicars, prefects, etc.
-		top_liege = { primary_title = { bureaucratic_government_trigger = yes } }
+		FROMFROM = {
+			independent = no
+			in_revolt = no # revolts shouldn't end on death
+			top_liege = { primary_title = { bureaucratic_government_trigger = yes } }
+		}
 		FROM = { #the inherited title
 			is_primary_type_title = no #e.g. Papacy shouldn't be affected
+			is_vice_royalty = no # uses standard vanilla mechanic instead
+			higher_real_tier_than = COUNT # should apply for governors, vicars, prefects, etc.
 		}
 	}
 	
