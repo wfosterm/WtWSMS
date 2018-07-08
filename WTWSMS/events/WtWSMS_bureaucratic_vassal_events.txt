@@ -25,6 +25,235 @@ character_event = {
 	immediate = {
 		FROM = { save_event_target_as = WtWSMS_viceroy_title }
 		FROMFROM = { save_event_target_as = WtWSMS_old_viceroy }
-		# TODO: inform liege
+		liege = { character_event = { id = WtWSMS_vice.2 days = 1 } }
+	}
+}
+
+# Liege accepts the successor or appoints another holder
+character_event = {
+	id = WtWSMS_vice.2
+	picture = GFX_evt_throne_room
+	desc = WtWSMS_vice.2.desc
+	
+	is_triggered_only = yes
+	
+	only_independent = yes
+	
+	option = {
+		name = WtWSMS_vice.2.a # Accept
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0.1
+				FROM = { trait = incapable }
+			}
+			modifier = {
+				factor = 0.9
+				FROM = { NOT = { age = 16 } }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { NOT = { age = 14 } }
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { NOT = { age = 12 } }
+			}
+			modifier = {
+				factor = 0.05
+				is_foe = FROM
+			}
+			modifier = {
+				factor = 0.5
+				trait = lunatic
+			}
+			modifier = {
+				factor = 1.5
+				trait = kind
+			}
+			modifier = {
+				factor = 1.5
+				trait = just
+			}
+			modifier = {
+				factor = 0.5
+				FROM = {
+					NOR = { #successor is crap
+						diplomacy = 5
+						martial = 5
+						stewardship = 5
+						intrigue = 5
+						learning = 5
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				FROM = { is_dumb_trigger = yes }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { reverse_opinion = { who = FROM value = 0 } }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { reverse_opinion = { who = FROM value = -25 } }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { reverse_opinion = { who = FROM value = -50 } }
+			}
+			modifier = {
+				factor = 1.2
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.2
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.2
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.2
+				opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.5
+				reverse_opinion = { who = FROM value = 25 }
+			}
+			modifier = {
+				factor = 1.5
+				reverse_opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 4.0
+				owes_favor_to = FROM
+			}
+			modifier = {
+				factor = 2.0
+				holds_favor_on = FROM
+			}
+		}
+		if = {
+			limit = {
+				event_target:viceroy_title = { tier = DUKE }
+				FROM = { 
+					vassal_of = ROOT
+					de_jure_liege_or_above = ROOT
+				}
+			}
+			reverse_opinion = { who = FROM modifier = opinion_granted_duchy_vice_royalty years = 20 }
+		}
+		if = {
+			limit = {
+				event_target:viceroy_title = { tier = KING }
+				FROM = {
+					vassal_of = ROOT
+					de_jure_liege_or_above = ROOT
+				}
+			}
+			reverse_opinion = { who = FROM modifier = opinion_granted_kingdom_vice_royalty years = 20 }
+		}
+		hidden_tooltip = {
+			#TODO: vassal reacts to decision
+		}
+	}
+	option = {
+		name = WtWSMS_vice.2.b # Appoint another holder
+		
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				OR = { #situations where the successor should be almost sure to be accepted
+					is_friend = FROM
+					is_allied_with = FROM
+					is_close_relative = FROM
+					opinion = { who = FROM value = 50 }
+					is_lover = FROM
+					FROM = { is_voter = yes }
+					FROM = { has_minor_title = title_commander }
+					FROM = { has_minor_title = title_appointed_regent }
+					FROM = { has_minor_title = title_tanist }
+					FROM = { has_minor_title = title_despot }
+					FROM = { has_minor_title = title_caesar }
+				}
+			}
+			modifier = {
+				factor = 0.2
+				dynasty = FROM #dynasties generally want to be strong
+			}
+			modifier = {
+				factor = 0.2
+				FROM = {
+					OR = { #successor is actually pretty good
+						is_smart_trigger = yes
+						diplomacy = 15
+						martial = 15
+						stewardship = 15
+						intrigue = 15
+						learning = 15
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				FROM = {
+					among_most_powerful_vassals = 5
+				}
+			}
+			modifier = {
+				factor = 0.1
+				FROM = {
+					in_faction = yes #no one wants to empower a faction...
+				}
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { relative_power = { who = FROM power = 4.0 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = 80 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = 60 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = 40 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = 20 } }
+			}
+			modifier = {
+				factor = 1.2
+				NOT = { opinion = { who = FROM value = 0 } }
+			}
+			modifier = {
+				factor = 1.2
+				NOT = { opinion = { who = FROM value = -20 } }
+			}
+			modifier = {
+				factor = 1.2
+				NOT = { opinion = { who = FROM value = -40 } }
+			}
+			modifier = {
+				factor = 1.2
+				NOT = { opinion = { who = FROM value = -60 } }
+			}
+			modifier = {
+				factor = 1.2
+				NOT = { opinion = { who = FROM value = -80 } }
+			}
+		}
+		hidden_tooltip = {
+			#TODO: successor reacts to decision
+			#TODO: new person selection
+		}
 	}
 }

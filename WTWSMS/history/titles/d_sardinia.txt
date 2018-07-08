@@ -28,7 +28,7 @@
 }
 533.1.1={
 	liege = "e_byzantium"
-	vice_royalty = yes
+	#vice_royalty = yes
 }
 588.1.1={
 	holder = 1300664 #Edantius
@@ -60,6 +60,6 @@
 }
 843.1.1={
 	liege=0
-	vice_royalty = no
+	#vice_royalty = no
 	holder=0
 }

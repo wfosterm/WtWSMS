@@ -2,7 +2,7 @@
 	pentarch = b_antiocheia
 }
 330.1.1 = {
-	vice_royalty = yes
+	#vice_royalty = yes
 }
 465.1.1 = {
 	holder = 215005 # Alexios

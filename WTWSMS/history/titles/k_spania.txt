@@ -1,7 +1,7 @@
 534.1.1={
 	holder=36554 # Iulius Laelius Sabinianus   
 	liege=e_byzantium
-	vice_royalty=yes
+	#vice_royalty=yes
 }
 
 550.1.1={

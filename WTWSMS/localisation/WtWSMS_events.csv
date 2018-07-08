@@ -1946,3 +1946,7 @@ WtWSMS_foederati.31.b.tooltip;Negotiations do not start.;Les négociations ne déb
 ###### Tribal events ;;;;;;;;;x 
 WtWSMS_tribal.2.desc;With the death of your predecessor [From.GetTitledFirstName], the kingdom of [destroyed_kingdom.GetName] has been destroyed, and the realm has fractured. Due to your perceived weakness, the lack of tribal authority  and centralisation, the former vassals have also decided to not recognise your authority and proclaimed their independence.;Avec la mort de votre prédécesseur [From.GetTitledFirstName], le royaume de [destroyed_kingdom.GetName] a été détruit, et s’est fracturé. En raison de votre faiblesse apparente, le manque d’autorité tribale et de centralisation, les anciens vassaux ont aussi décidé de ne plus reconnaître votre autorité et ont proclamé leur indépendance.;;;;;;;;;;;;x 
 WtWSMS_tribal.2.a;I will show them that my authority is not to be questioned!;Je vais leur apprendre que mon autorité ne doit pas être remise en question !;;;;;;;;;;;;x 
+###### Bureaucratic vassal title succession events ;;;;;;;;;x 
+WtWSMS_vice.2.desc;With the passing of [former_viceroy.GetTitledFirstNameNoRegnal], [viceroy_title.GetFullName] is now controlled by [From.GetFirstName], who rules without your assent. As a Bureaucratic liege of the title, you can choose to accept this successor or appoint a new person for the office.;;;;;;;;;;;;;x 
+WtWSMS_vice.2.a;[From.GetFirstName] may remain in office;;;;;;;;;;;;;x
+WtWSMS_vice.2.b;Offices shouldn't be hereditary. Let's choose a new person;;;;;;;;;;;;;x

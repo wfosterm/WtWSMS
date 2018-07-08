@@ -15,7 +15,7 @@
 	holder = 0
 }
 330.1.1={
-	vice_royalty=yes
+	#vice_royalty=yes
 }
 460.1.1={
 	holder = 32

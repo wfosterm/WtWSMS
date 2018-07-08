@@ -12,7 +12,7 @@
 }
 330.1.1={
 	holder = 190016 # Lollianus
-	vice_royalty = yes
+	#vice_royalty = yes
 }
 336.1.1={
 	holder=190017 # Felicianus
