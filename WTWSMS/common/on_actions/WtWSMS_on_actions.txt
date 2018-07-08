@@ -113,6 +113,13 @@ on_heresy_takeover = {
 	}
 }
 
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder_inheritance = {
+	events = {
+		WtWSMS_vice.1 #Duke or king vassal dies in bureaucratic realm
+	}
+}
+
 ###########################
 # DIPLOMATIC NOTIFICATIONS
 ###########################

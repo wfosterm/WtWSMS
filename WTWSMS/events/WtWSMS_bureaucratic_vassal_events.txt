@@ -1,0 +1,30 @@
+namespace = WtWSMS_vice
+
+###################################################################
+# Vassals that are not viceroys will be affected by these events
+###################################################################
+
+# Duke or king vassal dies in bureaucratic realm
+character_event = {
+	id = WtWSMS_vice.1
+	
+	is_triggered_only = yes #on_new_holder_inheritance on-action
+	hide_window = yes
+	
+	trigger = {
+		independent = no
+		in_revolt = no # revolts shouldn't end on death
+		is_vice_royalty = no # uses standard vanilla mechanic instead
+		higher_real_tier_than = COUNT # should apply for governors, vicars, prefects, etc.
+		top_liege = { primary_title = { bureaucratic_government_trigger = yes } }
+		FROM = { #the inherited title
+			is_primary_type_title = no #e.g. Papacy shouldn't be affected
+		}
+	}
+	
+	immediate = {
+		FROM = { save_event_target_as = WtWSMS_viceroy_title }
+		FROMFROM = { save_event_target_as = WtWSMS_old_viceroy }
+		# TODO: inform liege
+	}
+}
