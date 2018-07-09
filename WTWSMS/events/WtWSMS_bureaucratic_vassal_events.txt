@@ -21,6 +21,8 @@ character_event = {
 			is_primary_type_title = no #e.g. Papacy shouldn't be affected
 			is_vice_royalty = no # uses standard vanilla mechanic instead
 			higher_real_tier_than = COUNT # should apply for governors, vicars, prefects, etc.
+			
+			is_primary_holder_title_tier = yes #liege get events only about the vassal's highest tier titles
 		}
 	}
 	
@@ -159,7 +161,7 @@ character_event = {
 			reverse_opinion = { who = FROM modifier = opinion_granted_kingdom_vice_royalty years = 20 }
 		}
 		hidden_tooltip = {
-			#TODO: vassal reacts to decision
+			#TODO: successor reacts to decision
 		}
 	}
 	option = {
