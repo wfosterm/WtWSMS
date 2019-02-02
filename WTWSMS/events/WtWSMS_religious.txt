@@ -15,6 +15,8 @@ character_event = {
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_diplomacy
 	
+	hide_from = yes
+	
 	only_playable = yes
 	
 	trigger = {
@@ -825,10 +827,10 @@ province_event = {
 	desc = EVTDESCspirit.17
 	picture = GFX_evt_skyrim_forest_celtic
 	
-	#only_playable = yes
-	religion = germanic_pagan #move this to trigger block if you activate "only_playable = yes"
+	only_playable = yes
 	
 	trigger = {
+		religion = germanic_pagan
 		owner = {
 			religion = germanic_pagan_reformed
 			any_realm_province = {

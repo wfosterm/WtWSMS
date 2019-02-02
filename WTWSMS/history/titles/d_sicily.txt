@@ -25,6 +25,12 @@
 	liege = k_italy
 }
 494.1.1 = {
+	holder = 1300871 # Fl. Gelasius Busiris
+}
+515.1.1 = {
+	holder = 1300872 # Merulus
+}
+530.1.1 = {
 	holder=0
 }
 535.1.1 = {
@@ -32,6 +38,12 @@
 	liege="e_byzantium"
 }
 580.1.1 = {
+	holder = 31063 # Faustus Vigilius 
+}
+593.1.1 = {
+	holder = 1300175 # Libertinus
+}
+595.5.1 = {
 	holder = 31063 # Faustus Vigilius 
 }
 831.1.1 = {

@@ -1,9 +1,17 @@
 465.1.1={
 	holder=465824
-	liege = "e_byzantium"
+	liege = k_illyria_prefect
 }
 490.1.1={
 	holder=221702
+	liege = "k_illyria_prefect"
+}
+510.1.1 = {
+	holder = 1300179 # Victor
+}
+524.1.1={
+	holder=221702
+	liege = "k_illyria_prefect"
 }
 550.1.1={
 	holder=221703

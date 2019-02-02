@@ -267,7 +267,6 @@ decisions = {
 				}
 			}
 		}
-		
 		ai_will_do = {
 			factor = 1
 		}
@@ -292,14 +291,13 @@ decisions = {
 		}
 		effect = {
 		  primary_title = {
-			  e_kirghiz = {
-				  activate_title = { title = THIS status = yes } # Otherwise grant_title doesn't work
-				  grant_title = PREVPREV
-				  copy_title_laws = PREV
+				e_kirghiz = {
+					activate_title = { title = THIS status = yes } # Otherwise grant_title doesn't work
+					grant_title = PREVPREV
+					copy_title_laws = PREV
 					}
 			}
 		}
-			
 		ai_will_do = {
 			factor = 1
 		}
@@ -323,15 +321,13 @@ decisions = {
 		}
 		effect = {
 		  primary_title = {
-			  e_pecheneg = {
-				  activate_title = { title = THIS status = yes } # Otherwise grant_title doesn't work
-				  grant_title = PREVPREV
-				  copy_title_laws = PREV
-					}
+				e_pecheneg = {
+					activate_title = { title = THIS status = yes } # Otherwise grant_title doesn't work
+					grant_title = PREVPREV
+					copy_title_laws = PREV
+				}
 			}
 		}
-			
-		
 		ai_will_do = {
 			factor = 1
 		}
@@ -364,8 +360,6 @@ decisions = {
 				}
 			}
 		}
-			
-		
 		ai_will_do = {
 			factor = 1
 		}
@@ -401,14 +395,12 @@ decisions = {
 			wealth = -300
 			prestige = 1000
 		}
-			
-		
-
 		ai_will_do = {
 			factor = 1
 		}
 	}
 
+<<<<<<< HEAD
 
 form_spania = {
 		only_playable = yes
@@ -416,17 +408,30 @@ form_spania = {
 		potential={
 		    has_landed_title= e_byzantium
 		NOT = { has_global_flag = spania_created }
+=======
+	form_spania = {
+		only_playable = yes
+		is_high_prio = yes
+		potential = {
+		    has_landed_title = e_byzantium
+			NOT = { has_global_flag = spania_created }
+>>>>>>> master
 			completely_controls = k_baetica
 			k_spania = {
 				has_holder = no
 			}
 		}
+<<<<<<< HEAD
 		allow = {	
+=======
+		allow = {
+>>>>>>> master
 			prestige = 500
 			war = no
 			is_adult = yes
 			prisoner = no
 			is_incapable = no
+<<<<<<< HEAD
 		}	
 		effect = {
 			set_global_flag = spania_created
@@ -439,3 +444,24 @@ form_spania = {
 				}
 			}
 		}	
+=======
+		}
+		effect = {
+			set_global_flag = spania_created
+			
+			k_spania = {
+				activate_title = { title = THIS status = yes } # Otherwise grant_title doesn't work
+				grant_title = ROOT
+			}
+			ROOT = {
+				primary_title = {
+					k_spania = {
+						copy_title_laws = PREV
+					}
+				}
+				narrative_event = { id = hist.29 }
+			}
+		}
+	}
+}
+>>>>>>> master

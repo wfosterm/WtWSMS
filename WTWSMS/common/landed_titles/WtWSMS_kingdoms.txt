@@ -322,6 +322,23 @@ d_roman_prefect = {
 		always = no
 	}
 }
+d_constantinopolitan_prefect = {
+	color = { 200 0 0 }
+
+	dignity = 200 # Never want the urban Prefecture of Constantinople to change primary title
+	
+	capital = 496 # Constantinople
+
+	short_name = yes
+	
+	culture = roman
+
+	title = "PRAEFECTUS_URBI"
+	
+	allow = {
+		always = no
+	}
+}
 k_venice = {
 	color = { 54 167 156 }
 	capital = 356 # Venice
@@ -1884,7 +1901,7 @@ d_corsica = {
 	capital = 324 # Corsica
 	allow = {
 		always = no
-	}	
+	}
 }
 d_byzacena = {
 	color={ 20 42 59 }
@@ -1893,7 +1910,7 @@ d_byzacena = {
 	capital = 816 # Mahdia (capital was Hadrumentum)
 	allow = {
 		always = no
-	}	
+	}
 }
 k_mercia = {
 	color={ 76 25 25 }
@@ -2048,7 +2065,7 @@ d_taron = {
 	# Creation/Usurp Trigger
 	allow = {
 		always = no
-	}	
+	}
 }
 d_vaspurakan = {
 	color={ 243 10 110 }
@@ -2079,7 +2096,6 @@ k_tolosa = {
 	allow = {
 		always = no
 	}
-		
 }
 k_neustria = {
 	color={ 34 139 34 }
@@ -2093,7 +2109,6 @@ k_neustria = {
 	allow = {
 		always = no
 	}
-		
 }
 k_paris = {
 	color={ 107 142 35 }
@@ -2121,7 +2136,6 @@ k_northumbria = {
 	allow = {
 		always = no
 	}
-		
 }
 k_dal_riata = {
 	color={ 0 64 165 }
@@ -2192,6 +2206,28 @@ d_fotla = {
 		always = no
 	}
 }
+d_raetia_secunda = {
+	color={ 150 230 145 }
+	color2 = { 255 255 255 }
+	
+	capital = 315 # Kempten
+	
+	culture = roman
+	
+	allow = {
+		always = no
+	}
+}
+d_savia = {
+	color={ 170 156 148 }
+	color2={ 255 255 255 }
+	
+	capital = 461 # Siscia, in province of Zagreb
+	allow = {
+		always = no
+	}
+}
+
 k_auvergne = {
 	color={ 26 173 228 }
 	color2={ 255 255 255 }

@@ -2699,11 +2699,18 @@ narrative_event = {
 		piety = 150
 		prestige = 25
 		wealth = -100
+<<<<<<< HEAD
 		}
 		c_santiago ={
 		  location = {
 		  add_province_modifier = visigothic_conversion
 		  }
+=======
+		c_santiago ={
+			location = {
+				add_province_modifier = visigothic_conversion
+			}
+>>>>>>> master
 		}
 	}
 }
